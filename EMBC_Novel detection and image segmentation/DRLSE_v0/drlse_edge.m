@@ -1,9 +1,5 @@
 function phi = drlse_edge(phi_0, g, lambda,mu, alfa, epsilon, timestep, iter, potentialFunction)
-%  This Matlab code implements an edge-based active contour model as an
-%  application of the Distance Regularized Level Set Evolution (DRLSE) formulation in Li et al's paper:
-%
-%      C. Li, C. Xu, C. Gui, M. D. Fox, "Distance Regularized Level Set Evolution and Its Application to Image Segmentation", 
-%        IEEE Trans. Image Processing, vol. 19 (12), pp.3243-3254, 2010.
+
 %
 %  Input:
 %      phi_0: level set function to be updated by level set evolution
@@ -21,10 +17,7 @@ function phi = drlse_edge(phi_0, g, lambda,mu, alfa, epsilon, timestep, iter, po
 %  Output:
 %      phi: updated level set function after level set evolution
 %
-% Author: Chunming Li, all rights reserved
-% E-mail: lchunming@gmail.com   
-%         li_chunming@hotmail.com 
-% URL:  http://www.imagecomputing.org/~cmli/
+
 
 phi=phi_0;
 [vx, vy]=gradient(g);
