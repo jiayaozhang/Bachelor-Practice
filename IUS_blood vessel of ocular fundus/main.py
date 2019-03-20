@@ -75,7 +75,7 @@ def epochTest(net,batch,picNames):
         inputs = Variable(data).cuda()
         label = Variable(label.float()).cuda()
         pred = net(inputs)
-        batchLoss -= torch.matmul(label,torch.log(pred+0.00000000001))
+        batchLoss -= torch.matmul(label,torch.log(pred+0.00000000001))            
         batchLoss -= torch.matmul((1-label),torch.log(1-pred+0.0000000001))
         testLoss = np.append(testLoss,batchLoss.data.cpu().numpy())
     rocPlot(pred,label)
@@ -130,14 +130,6 @@ if __name__=='__main__':
     trainPaths = picPaths[picSample[:trainNum]]
     testPaths = picPaths[picSample[trainNum:]]
 
-    picSample = np.arange(79)
-    np.random.shuffle(picSample)
-    picPaths = []
-    for main,sub,files in os.walk('./data/neg'):
-        for fileTemp in files:
-            if '.bmp' in fileTemp:
-                picPaths.append(os.path.join(main,fileTemp))
-    picPaths = np.array(picPaths)
 
     trainPaths = np.append(trainPaths,picPaths[picSample[:trainNum]])
     testPaths = np.append(testPaths,picPaths[picSample[trainNum:]])
