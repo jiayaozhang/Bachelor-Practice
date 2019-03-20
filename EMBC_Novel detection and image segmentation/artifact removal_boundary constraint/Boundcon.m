@@ -1,21 +1,4 @@
-%  CORRESPONDENCE INFORMATION
-%  This code is written by Gaofeng MENG 
-%
-%  Gaofeng MENG:  
-%  National Laboratory of Pattern Recognition,
-%  Institute of Automation, Academy of Sciences, Beijing 100190
-%  Comments and bug reports are welcome.  Email to gfmeng@nlpr.ia.ac.cn
-%
-%  WORK SETTING:
-%  This code has been compiled and tested by using MATLAB R2009a
-%
-%  For more detials, please see our paper:
-%  Gaofeng MENG, Ying WANG, Jiangyong DUAN, Shiming XIANG, Chunhong PAN. 
-%  Efficient Image Dehazing with Boundary Constraint and Contextual Regularization, 
-%  ICCV, Sydney, Australia, pp.617-624, 3-6 Dec., 2013.
-%
-%  Last Modified: Feb. 14, 2014, By Gaofeng MENG
-%   
+   
 
 function [t_bdcon, t_b] = Boundcon(HazeImg, A, C0, C1, sz)
 % patch-wise transmission from boundary constraint
